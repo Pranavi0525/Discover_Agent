@@ -1,0 +1,11 @@
+Copy these files over your repo (same relative paths), then run the tests.
+
+PowerShell, from the folder that contains M14-update and your repo:
+
+  Copy-Item -Recurse -Force .\M14-update\* .\DiscoveryAgent-dynamic\
+  cd .\DiscoveryAgent-dynamic
+  .\.venv\Scripts\python.exe -m pytest -q
+
+Expected: 353 passed.
+
+Do NOT copy .env or .venv anywhere. .env.example only gains one commented line.
