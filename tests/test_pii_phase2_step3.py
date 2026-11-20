@@ -36,8 +36,8 @@ def _pii_on(monkeypatch: pytest.MonkeyPatch):
     ("Authorization: Bearer abcdefghijklmnopqrstuvwx1234", ["abcdefghijkl"], []),
     ("GOOGLE_API_KEY=abcd1234efgh5678", ["abcd1234efgh5678"], ["GOOGLE_API_KEY"]),
         (
-        "token " + "shpat_" + ("x" * 32) + " leaked",
-        ["shpat_xxxx"],
+        "token " + "shpat_" + ("a1b2" * 8) + " leaked",
+        ["shpat_a1b2"],
         ["leaked"],
     ),
 ])
